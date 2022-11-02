@@ -1,0 +1,43 @@
+
+# create DB
+CREATE DATABASE aircrafts;
+
+# start work with db
+USE aircrafts;
+
+# create tables 
+CREATE TABLE manufacturers(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    origin VARCHAR(20),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE type(
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE details(
+    id INT NOT NULL AUTO_INCREMENT,
+    model VARCHAR(25) NOT NULL,
+    manufacturers_id INT,
+    type_id INT,
+    first_flight DATE,
+    number_built INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY(manufacturers_id) REFERENCES manufacturers(id),
+    FOREIGN KEY(type_id) REFERENCES type(id)
+);    
+
+# add info 
+INSERT INTO type(name)
+VALUES
+('Regional jet'), ('Narrow-body'), ('Wide-body'), ('Narrow-body jet');
+
+INSERT INTO manufacturers(name, origin)
+VALUES
+('Airbus', 'Europe'), ('Boeing', 'USA'), ('Sukhoi', 'Russia'), ('Fokker', 'Netherlands'), ('Tupolev', 'Russia');
+
+
