@@ -24,10 +24,10 @@ DROP TABLE IF EXISTS `manufacturers`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `manufacturers` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(30) NOT NULL,
+  `m_name` varchar(30) NOT NULL,
   `origin` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -36,7 +36,7 @@ CREATE TABLE `manufacturers` (
 
 LOCK TABLES `manufacturers` WRITE;
 /*!40000 ALTER TABLE `manufacturers` DISABLE KEYS */;
-INSERT INTO `manufacturers` VALUES (1,'Airbus','Europe'),(2,'Boeing','USA'),(3,'Sukhoi','Russia'),(4,'Fokker','Netherlands'),(5,'Tupolev','Russia'),(6,'Douglas','USA'),(7,'Bombardier ','Canadair '),(8,'Dassault Aviation','France');
+INSERT INTO `manufacturers` VALUES (1,'Airbus','Europe'),(2,'Boeing','USA'),(3,'Sukhoi','Russia'),(4,'Fokker','Netherlands'),(5,'Tupolev','Russia'),(6,'Douglas','USA'),(7,'Bombardier ','Canadair '),(8,'Dassault Aviation','France'),(9,'Comac ','Chine'),(10,'Cessna ','USA'),(11,'Fairchild Dornier','Germany'),(12,'Mitsubishi ','Japan');
 /*!40000 ALTER TABLE `manufacturers` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -49,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-02 23:12:55
+-- Dump completed on 2022-11-03 19:23:01
